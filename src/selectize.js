@@ -116,6 +116,8 @@ $.extend(Selectize.prototype, {
 		var classes;
 		var classes_plugins;
 
+        console.log('mychanges');
+
 		inputMode         = self.settings.mode;
 		classes           = $input.attr('class') || '';
 

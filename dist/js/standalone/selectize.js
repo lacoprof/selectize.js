@@ -420,14 +420,14 @@
 		return (str + '').replace(/([.?*+^$[\]\\(){}|-])/g, '\\$1');
 	};
 
-	var is_array = Array.isArray || ($ && $.isArray) || function(object) {
+	var is_array = Array.isArray || (typeof $ !== 'undefined' && $.isArray) || function(object) {
 		return Object.prototype.toString.call(object) === '[object Array]';
 	};
 
 	var DIACRITICS = {
 		'a': '[aÀÁÂÃÄÅàáâãäåĀāąĄ]',
 		'c': '[cÇçćĆčČ]',
-		'd': '[dđĐďĎ]',
+		'd': '[dđĐďĎð]',
 		'e': '[eÈÉÊËèéêëěĚĒēęĘ]',
 		'i': '[iÌÍÎÏìíîïĪī]',
 		'l': '[lłŁ]',
@@ -608,7 +608,7 @@
 }));
 
 /**
- * selectize.js (v0.12.1)
+ * selectize.js (v0.12.2)
  * Copyright (c) 2013–2015 Brian Reavis & contributors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
@@ -1170,6 +1170,8 @@
 			var timeout_focus;
 			var classes;
 			var classes_plugins;
+	
+	        console.log('mychanges');
 	
 			inputMode         = self.settings.mode;
 			classes           = $input.attr('class') || '';

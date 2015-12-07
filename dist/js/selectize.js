@@ -1,5 +1,5 @@
 /**
- * selectize.js (v0.12.1)
+ * selectize.js (v0.12.2)
  * Copyright (c) 2013–2015 Brian Reavis & contributors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
@@ -561,6 +561,8 @@
 			var timeout_focus;
 			var classes;
 			var classes_plugins;
+	
+	        console.log('mychanges');
 	
 			inputMode         = self.settings.mode;
 			classes           = $input.attr('class') || '';
